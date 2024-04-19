@@ -1,11 +1,12 @@
 import os
 import zipfile
-
+import sys
 import xlrd
 from pypdf import PdfReader
 from zipfile import ZipFile
 from openpyxl.reader.excel import load_workbook
 from utils.constants import RESOURCES_DIR, ARCHIVE_PATH, PDF_FILE, TXT_FILE, XLS_FILE, XLSX_FILE, LIST_OF_FILES
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 
 def test_archive_exists(create_archive):
